@@ -1,6 +1,9 @@
 export default function Start(props) {
-    const { handleStart } = props
-    console.log(handleStart)
+    const { socket } = props
+    const handleStart = () => {
+        console.log('starting...')
+        socket.current.emit('start')
+    }
 
     return (
         <>
