@@ -9,6 +9,7 @@ function App() {
 
   useEffect(() => {
     socket.current = io(REACT_APP_API_URL)
+    socket.current.on('accessCode', accessCode => console.log(accessCode))
   }, [REACT_APP_API_URL])
 
 

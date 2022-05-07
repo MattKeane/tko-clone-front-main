@@ -2,7 +2,7 @@ export default function Start(props) {
     const { socket } = props
     const handleStart = () => {
         console.log('starting...')
-        socket.current.emit('start')
+        socket.current.emit('createRoom')
     }
 
     return (
